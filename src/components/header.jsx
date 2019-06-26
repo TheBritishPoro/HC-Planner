@@ -7,7 +7,8 @@ class Header extends Component {
   }
   render() {
     return (
-      <div className="header">
+      <div className="header flex-container">
+        <h1 id="main-header">Hardcore Ironman Task Management</h1>
         <Createtask />
       </div>
     );
