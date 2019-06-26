@@ -5,7 +5,13 @@ class Task extends Component {
     this.state = {};
   }
   render() {
-    return <div />;
+    return (
+      <div className="task-div">
+        <div className="task-header">Sample Task Name</div>
+        <p className="task-description">Sample Task Description</p>
+        <p className="task-requirements">Sample Task Requirements</p>
+      </div>
+    );
   }
 }
 
