@@ -1,15 +1,12 @@
 import React, { Component } from "react";
-import "./App.css";
-
-class App extends Component {
+class Task extends Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
-
   render() {
-    return <div className="App" />;
+    return <div />;
   }
 }
 
-export default App;
+export default Task;
