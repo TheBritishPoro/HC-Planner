@@ -27,7 +27,8 @@ class Createtaskmodal extends Component {
   };
 
   afterOpenModal = () => {
-    // references are now synced and can be accessed
+    document.getElementById("create-button").tabIndex = -1;
+    document.getElementById("input-name").focus();
   };
 
   closeModal = () => {
@@ -76,6 +77,7 @@ class Createtaskmodal extends Component {
             />
           </form>
           <button
+            id="create-button"
             style={{ float: "right" }}
             className="btn-standard"
             onClick={this.handleClick}
