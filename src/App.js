@@ -2,9 +2,11 @@ import React, { Component } from "react";
 import "./App.css";
 import Task from "./components/task";
 import Header from "./components/header";
-import makeElementsMovable from "./makemovable";
+import makeElementsMovable from "./functions/makemovable";
+import getPositions from "./functions/getpositions";
 
 let tasks = [];
+let positions = [];
 let incrementKey = 0;
 
 class App extends Component {
@@ -24,6 +26,8 @@ class App extends Component {
 
   componentDidUpdate() {
     makeElementsMovable();
+    positions = getPositions();
+    console.log(positions);
   }
 
   renderTask = (name, description, requirements) => {
@@ -38,7 +42,6 @@ class App extends Component {
     );
     incrementKey++;
     this.setState({ renderedTasks: tasks });
-    console.log(tasks[0]);
   };
 }
 
