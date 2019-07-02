@@ -2,9 +2,11 @@ import React, { Component } from "react";
 import "./App.css";
 import Task from "./components/task";
 import Header from "./components/header";
+import makeElementsMovable from "./makemovable";
 
 let tasks = [];
 let incrementKey = 0;
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -20,10 +22,15 @@ class App extends Component {
     );
   }
 
+  componentDidUpdate() {
+    makeElementsMovable();
+  }
+
   renderTask = (name, description, requirements) => {
     tasks.push(
       <Task
-        key={incrementKey}
+        key={"task-" + incrementKey}
+        id={"task-" + incrementKey}
         taskName={name}
         description={description}
         requirements={requirements}
