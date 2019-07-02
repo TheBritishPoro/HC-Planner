@@ -7,9 +7,9 @@ class Task extends Component {
   render() {
     return (
       <div className="task-div">
-        <div className="task-header">Sample Task Name</div>
-        <p className="task-description">Sample Task Description</p>
-        <p className="task-requirements">Sample Task Requirements</p>
+        <div className="task-header">{this.props.taskName}</div>
+        <p className="task-description">{this.props.description}</p>
+        <p className="task-requirements">{this.props.requirements}</p>
       </div>
     );
   }

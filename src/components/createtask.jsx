@@ -36,10 +36,18 @@ class Createtaskmodal extends Component {
     });
   };
 
+  handleClick = () => {
+    const name = document.getElementById("input-name").value;
+    const description = document.getElementById("input-description").value;
+    const requirements = document.getElementById("input-requirements").value;
+    this.props.renderTask(name, description, requirements);
+    this.closeModal();
+  };
+
   render() {
     return (
       <div id="create-task">
-        <button id="create-task-button" onClick={this.openModal}>
+        <button className="btn-standard" onClick={this.openModal}>
           Create Task
         </button>
         <Modal
@@ -51,16 +59,29 @@ class Createtaskmodal extends Component {
         >
           <h2 ref={subtitle => (this.subtitle = subtitle)}>Create Task</h2>
           <form>
-            <textarea className="task-creation" placeholder="Task Name" />
             <textarea
+              id="input-name"
+              className="task-creation"
+              placeholder="Task Name"
+            />
+            <textarea
+              id="input-description"
               className="task-creation"
               placeholder="Task Description"
             />
             <textarea
+              id="input-requirements"
               className="task-creation"
               placeholder="Task Requirements"
             />
           </form>
+          <button
+            style={{ float: "right" }}
+            className="btn-standard"
+            onClick={this.handleClick}
+          >
+            Create
+          </button>
         </Modal>
       </div>
     );

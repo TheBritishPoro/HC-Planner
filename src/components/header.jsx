@@ -9,7 +9,7 @@ class Header extends Component {
     return (
       <div className="header flex-container">
         <h1 id="main-header">Hardcore Ironman Task Management</h1>
-        <Createtask />
+        <Createtask renderTask={this.props.renderTask} />
       </div>
     );
   }
