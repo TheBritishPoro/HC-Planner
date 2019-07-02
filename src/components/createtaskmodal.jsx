@@ -21,6 +21,7 @@ class Createtaskmodal extends Component {
   }
 
   openModal = () => {
+    document.activeElement.blur();
     this.setState({
       modalIsOpen: true
     });
@@ -66,7 +67,6 @@ class Createtaskmodal extends Component {
           <form
             onKeyDown={evt => {
               if (evt.keyCode === 13) {
-                evt.preventDefault();
                 this.handleSubmit();
               }
             }}
