@@ -60,7 +60,7 @@ class App extends Component {
       taskObjects[i].top = positions[i].top;
       taskObjects[i].left = positions[i].left;
     }
-    apiCalls.saveSettings(taskObjects);
+    apiCalls.saveSettings({ tasks: taskObjects });
   };
 }
 

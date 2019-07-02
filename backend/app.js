@@ -21,12 +21,6 @@ App.get("/api/settings/save", async (req, res, next) => {
 
 App.put("/api/settings/save", async (req, res, next) => {
   console.log("settings/save called");
-  const jsonData = await settings.writeSettings(
-    req.query["name"],
-    req.query["description"],
-    req.query["requirements"],
-    req.query["top"],
-    req.query["left"]
-  );
+  const jsonData = await settings.writeSettings(req.query["tasks"]);
   return res.send(jsonData);
 });

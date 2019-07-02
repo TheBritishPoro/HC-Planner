@@ -5,11 +5,7 @@ function saveSettings(data) {
     method: "PUT",
     url: "/api/settings/save",
     params: {
-      name: data.name,
-      description: data.description,
-      requirements: data.requirements,
-      top: data.top,
-      left: data.left
+      tasks: data.tasks
     }
   });
 }
