@@ -4,6 +4,7 @@ import Task from "./components/task";
 import Header from "./components/header";
 import makeElementsMovable from "./functions/makemovable";
 import getPositions from "./functions/getpositions";
+import apiCalls from "./functions/apicalls";
 
 let tasks = [];
 let positions = [];
@@ -59,6 +60,7 @@ class App extends Component {
       taskObjects[i].top = positions[i].top;
       taskObjects[i].left = positions[i].left;
     }
+    apiCalls.saveSettings(taskObjects);
   };
 }
 
