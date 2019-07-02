@@ -7,6 +7,7 @@ import getPositions from "./functions/getpositions";
 
 let tasks = [];
 let positions = [];
+let taskObjects = [];
 let incrementKey = 0;
 
 class App extends Component {
@@ -18,7 +19,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header renderTask={this.renderTask} />
+        <Header
+          renderTask={this.renderTask}
+          writeSettings={this.saveSettings}
+        />
         <div id="tasks-div">{this.state.renderedTasks}</div>
       </div>
     );
@@ -40,8 +44,21 @@ class App extends Component {
         requirements={requirements}
       />
     );
+    let taskObject = {};
+    taskObject.name = name;
+    taskObject.description = description;
+    taskObject.requirements = requirements;
+    taskObjects.push(taskObject);
     incrementKey++;
     this.setState({ renderedTasks: tasks });
+  };
+
+  saveSettings = () => {
+    this.forceUpdate();
+    for (let i = 0; i < taskObjects.length; i++) {
+      taskObjects[i].top = positions[i].top;
+      taskObjects[i].left = positions[i].left;
+    }
   };
 }
 

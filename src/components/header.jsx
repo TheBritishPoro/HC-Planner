@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import Createtask from "./createtaskmodal";
+import Createtaskmodal from "./createtaskmodal";
+
 class Header extends Component {
   constructor(props) {
     super(props);
@@ -8,8 +9,13 @@ class Header extends Component {
   render() {
     return (
       <div className="header flex-container">
+        <div id="save-div">
+          <button className="btn-standard" onClick={this.props.writeSettings}>
+            Save Tasks
+          </button>
+        </div>
         <h1 id="main-header">OSRS Task Management</h1>
-        <Createtask renderTask={this.props.renderTask} />
+        <Createtaskmodal renderTask={this.props.renderTask} />
       </div>
     );
   }
