@@ -15,7 +15,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header renderTask={this.renderTask} />
-        {this.state.renderedTasks}
+        <div id="tasks-div">{this.state.renderedTasks}</div>
       </div>
     );
   }

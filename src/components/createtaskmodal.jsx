@@ -37,11 +37,15 @@ class Createtaskmodal extends Component {
     });
   };
 
-  handleClick = () => {
-    const name = document.getElementById("input-name").value;
-    const description = document.getElementById("input-description").value;
-    const requirements = document.getElementById("input-requirements").value;
-    this.props.renderTask(name, description, requirements);
+  handleSubmit = () => {
+    const nameInput = document.getElementById("input-name");
+    const descriptionInput = document.getElementById("input-description");
+    const requirementsInput = document.getElementById("input-requirements");
+    this.props.renderTask(
+      nameInput.value,
+      descriptionInput.value,
+      requirementsInput.value
+    );
     this.closeModal();
   };
 
@@ -80,7 +84,7 @@ class Createtaskmodal extends Component {
             id="create-button"
             style={{ float: "right" }}
             className="btn-standard"
-            onClick={this.handleClick}
+            onClick={this.handleSubmit}
           >
             Create
           </button>
