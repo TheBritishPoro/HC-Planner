@@ -63,7 +63,14 @@ class Createtaskmodal extends Component {
           contentLabel="Example Modal"
         >
           <h2 ref={subtitle => (this.subtitle = subtitle)}>Create Task</h2>
-          <form>
+          <form
+            onKeyDown={evt => {
+              if (evt.keyCode === 13) {
+                evt.preventDefault();
+                this.handleSubmit();
+              }
+            }}
+          >
             <textarea
               id="input-name"
               className="task-creation"

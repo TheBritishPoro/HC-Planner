@@ -38,7 +38,6 @@ class App extends Component {
     );
     incrementKey++;
     this.setState({ renderedTasks: tasks });
-    console.log(tasks);
   };
 }
 
