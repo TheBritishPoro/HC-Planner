@@ -12,7 +12,7 @@ async function readSettings() {
   return data;
 
   async function writeSettings(data) {
-    await fs.writeFile(filePath, data, err => {
+    await fs.writeFile(filePath, JSON.stringify(data, null, 2), err => {
       if (err) return console.log(err);
     });
     return data;
