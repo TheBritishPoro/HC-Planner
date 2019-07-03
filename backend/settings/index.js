@@ -1,3 +1,3 @@
-const { readSettings, writeSettings } = require("./settings");
+const { readSettings, writeSettings } = require("./settingslogic");
 
 module.exports = { readSettings, writeSettings };

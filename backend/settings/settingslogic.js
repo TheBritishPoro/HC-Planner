@@ -5,18 +5,18 @@ const filePath = path.join(__dirname, "../", "settings.json");
 async function readSettings() {
   let settingsData = await new Promise((resolve, reject) => {
     fs.readFile(filePath, (error, data) => {
-      if (error) throw error;
+      if (error) console.log(error);
       resolve(JSON.parse(data));
     });
   });
-  return data;
-
-  async function writeSettings(data) {
-    await fs.writeFile(filePath, JSON.stringify(data, null, 2), err => {
-      if (err) return console.log(err);
-    });
-    return data;
-  }
+  return settingsData;
 }
 
-module.exports = { getSettings, writeSettings };
+async function writeSettings(data) {
+  await fs.writeFile(filePath, JSON.stringify(data, null, 2), err => {
+    if (err) return console.log(err);
+  });
+  return data;
+}
+
+module.exports = { readSettings, writeSettings };
