@@ -1,1 +1,11 @@
-{}
+{
+  "tasks": [
+    {
+      "name": "qwe",
+      "description": "asd",
+      "requirements": "zxc",
+      "top": 123,
+      "left": 789
+    }
+  ]
+}
