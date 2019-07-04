@@ -1,4 +1,4 @@
-# Installing The App
+## Installing The App
 
 ### `npm run install-all`
 
