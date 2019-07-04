@@ -4,7 +4,7 @@
 
 Installs solution, frontend and backend in one command.
 
-### 'npm run install-solution`
+### `npm run install-solution`
 
 Installs main solution.
 
