@@ -1,0 +1,45 @@
+.header {
+  background-color: #f1f1f1;
+  padding: 10px 10px;
+}
+
+.flex-container {
+  display: flex;
+}
+
+#main-header {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.task-div {
+  position: absolute;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+  font-size: 16px;
+}
+
+.task-div-header {
+  padding: 10px;
+  cursor: move;
+  background-color: #2196f3;
+  color: #fff;
+  font-size: 16px;
+}
+
+button.btn-standard {
+  height: 95%;
+  background-color: #2196f3;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 16px;
+  border: none;
+}
+
+.task-creation {
+  height: 200px;
+  font-size: 12pt;
+  padding: 10px;
+  margin: 10px;
+}
