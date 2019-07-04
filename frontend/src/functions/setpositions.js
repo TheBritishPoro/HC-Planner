@@ -4,7 +4,6 @@ function setPositions(positions) {
     tasks[i].style.top = positions[i].top + "px";
     tasks[i].style.left = positions[i].left + "px";
   }
-  console.log(tasks);
 }
 
 export default setPositions;
