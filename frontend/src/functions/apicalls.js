@@ -1,7 +1,7 @@
 import axios from "axios";
 
-function saveSettings(data) {
-  axios
+async function saveSettings(data) {
+  await axios
     .put("http://localhost:3005/api/settings", {
       tasks: data.tasks
     })
@@ -14,17 +14,19 @@ function saveSettings(data) {
     });
 }
 
-function loadSettings() {
-  axios({
-    method: "GET",
-    url: "http://localhost:3005/api/settings"
-  })
+async function loadSettings() {
+  let output = [];
+  await axios
+    .get("http://localhost:3005/api/settings")
     .then(res => {
-      return res;
+      res.data.tasks.forEach(task => {
+        output.push(task);
+      });
     })
     .catch(error => {
       throw error;
     });
+  return output;
 }
 
 export default { saveSettings, loadSettings };

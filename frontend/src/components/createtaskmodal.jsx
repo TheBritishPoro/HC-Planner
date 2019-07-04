@@ -3,12 +3,14 @@ import Modal from "react-modal";
 
 const customStyles = {
   content: {
+    position: "absolute",
     top: "50%",
     left: "50%",
     right: "auto",
     bottom: "auto",
     marginRight: "-50%",
-    transform: "translate(-50%, -50%)"
+    transform: "translate(-50%, -50%)",
+    zIndex: "10"
   }
 };
 
@@ -45,7 +47,9 @@ class Createtaskmodal extends Component {
     this.props.renderTask(
       nameInput.value,
       descriptionInput.value,
-      requirementsInput.value
+      requirementsInput.value,
+      0,
+      0
     );
     this.closeModal();
   };

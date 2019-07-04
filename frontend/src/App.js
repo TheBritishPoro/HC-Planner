@@ -4,9 +4,11 @@ import Task from "./components/task";
 import Header from "./components/header";
 import makeElementsMovable from "./functions/makemovable";
 import getPositions from "./functions/getpositions";
+import setPositions from "./functions/setpositions";
 import apiCalls from "./functions/apicalls";
 
 let tasks = [];
+let initialPositions = [];
 let positions = [];
 let taskObjects = [];
 let incrementKey = 0;
@@ -14,7 +16,7 @@ let incrementKey = 0;
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { renderedTasks: [] };
+    this.state = { renderedTasks: tasks };
   }
 
   render() {
@@ -29,10 +31,24 @@ class App extends Component {
     );
   }
 
+  componentDidMount() {
+    this.loadTasks();
+  }
+
   componentDidUpdate() {
     makeElementsMovable();
     positions = getPositions();
   }
+
+  loadTasks = async () => {
+    const responseTasks = await apiCalls.loadSettings();
+    console.log(responseTasks);
+    responseTasks.forEach(task => {
+      this.renderTask(task.name, task.description, task.requirements);
+      initialPositions.push({ top: task.top, left: task.left });
+    });
+    setPositions(initialPositions);
+  };
 
   renderTask = (name, description, requirements) => {
     tasks.push(

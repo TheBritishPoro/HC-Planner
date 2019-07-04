@@ -4,22 +4,43 @@
       "name": "asd",
       "description": "asd",
       "requirements": "asd",
-      "top": "234",
-      "left": "532"
+      "top": "197",
+      "left": "940"
     },
     {
       "name": "asdsdf",
       "description": "asdsadf",
       "requirements": "asdadfasdf",
-      "top": "622",
-      "left": "292"
+      "top": "191",
+      "left": "1083"
     },
     {
       "name": "18273981271874",
       "description": "891728937",
       "requirements": "184981",
-      "top": "615",
-      "left": "966"
+      "top": "183",
+      "left": "693"
+    },
+    {
+      "name": "asd",
+      "description": "asdasda",
+      "requirements": "asdasdasdasdasd",
+      "top": "175",
+      "left": "305"
+    },
+    {
+      "name": "asdas",
+      "description": "asdasdasd",
+      "requirements": "asdasdasd",
+      "top": "178",
+      "left": "144"
+    },
+    {
+      "name": "Get 60 mining",
+      "description": "mine iron",
+      "requirements": "15 mining",
+      "top": "175",
+      "left": "507"
     }
   ]
 }
