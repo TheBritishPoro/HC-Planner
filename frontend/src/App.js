@@ -32,7 +32,6 @@ class App extends Component {
   componentDidUpdate() {
     makeElementsMovable();
     positions = getPositions();
-    console.log(positions);
   }
 
   renderTask = (name, description, requirements) => {
