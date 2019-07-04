@@ -53,8 +53,8 @@ class App extends Component {
     this.setState({ renderedTasks: tasks });
   };
 
-  saveSettings = () => {
-    this.forceUpdate();
+  saveSettings = async () => {
+    await this.forceUpdate();
     for (let i = 0; i < taskObjects.length; i++) {
       taskObjects[i].top = positions[i].top;
       taskObjects[i].left = positions[i].left;
