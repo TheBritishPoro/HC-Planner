@@ -1,46 +1,36 @@
 {
   "tasks": [
     {
+      "id": "task-0",
+      "name": "1231231",
+      "description": "we12312",
+      "requirements": "weqwe",
+      "top": "750",
+      "left": "1206"
+    },
+    {
+      "id": "task-1",
+      "name": "112312",
+      "description": "12313",
+      "requirements": "12312",
+      "top": "777",
+      "left": "1237"
+    },
+    {
+      "id": "task-2",
       "name": "asd",
       "description": "asd",
       "requirements": "asd",
-      "top": "197",
-      "left": "940"
+      "top": "769",
+      "left": "1211"
     },
     {
-      "name": "asdsdf",
-      "description": "asdsadf",
-      "requirements": "asdadfasdf",
-      "top": "191",
-      "left": "1083"
-    },
-    {
-      "name": "18273981271874",
-      "description": "891728937",
-      "requirements": "184981",
-      "top": "183",
-      "left": "693"
-    },
-    {
-      "name": "asd",
-      "description": "asdasda",
-      "requirements": "asdasdasdasdasd",
-      "top": "175",
-      "left": "305"
-    },
-    {
-      "name": "asdas",
-      "description": "asdasdasd",
-      "requirements": "asdasdasd",
-      "top": "178",
-      "left": "144"
-    },
-    {
-      "name": "Get 60 mining",
-      "description": "mine iron",
-      "requirements": "15 mining",
-      "top": "175",
-      "left": "507"
+      "id": "task-3",
+      "name": "asdasd",
+      "description": "asdasd",
+      "requirements": "asdasd",
+      "top": "369",
+      "left": "538"
     }
   ]
 }

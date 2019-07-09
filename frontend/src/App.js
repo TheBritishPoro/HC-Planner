@@ -6,6 +6,7 @@ import makeElementsMovable from "./functions/makemovable";
 import getPositions from "./functions/getpositions";
 import setPositions from "./functions/setpositions";
 import apiCalls from "./functions/apicalls";
+import Bin from "./components/bin";
 
 let tasks = [];
 let initialPositions = [];
@@ -27,6 +28,7 @@ class App extends Component {
           writeSettings={this.saveSettings}
         />
         <div id="tasks-div">{this.state.renderedTasks}</div>
+        <Bin />
       </div>
     );
   }
@@ -36,7 +38,7 @@ class App extends Component {
   }
 
   componentDidUpdate() {
-    makeElementsMovable();
+    taskObjects = makeElementsMovable(taskObjects);
     positions = getPositions();
   }
 
@@ -61,6 +63,7 @@ class App extends Component {
       />
     );
     let taskObject = {};
+    taskObject.id = "task-" + incrementKey;
     taskObject.name = name;
     taskObject.description = description;
     taskObject.requirements = requirements;

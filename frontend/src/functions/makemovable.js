@@ -1,4 +1,7 @@
-function makeElementsMovable() {
+import deleteTasks from "./deletetasks";
+
+function makeElementsMovable(taskObjects) {
+  let output = [];
   let taskElements = document.querySelectorAll("div.task-div");
   taskElements.forEach(element => {
     dragElement(element);
@@ -30,8 +33,11 @@ function makeElementsMovable() {
       pos2 = pos4 - e.clientY;
       pos3 = e.clientX;
       pos4 = e.clientY;
+
       elmnt.style.top = elmnt.offsetTop - pos2 + "px";
       elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
+      output = deleteTasks(taskObjects);
+      console.log(output);
     }
 
     function closeDragElement() {
@@ -39,6 +45,7 @@ function makeElementsMovable() {
       document.onmousemove = null;
     }
   }
+  return taskObjects;
 }
 
 export default makeElementsMovable;
